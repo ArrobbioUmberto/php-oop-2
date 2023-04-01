@@ -13,11 +13,12 @@ class Food extends Product
         $this->hasMeet = $_hasMeet;
         $this->consistency = $_consistency;
     }
-    //     function checkMeet()
-    //     { if($hasMeet === false){
-    // return "Non contiene carne"
-    //     } else if{
-    //         return "Contiene della carne"
-    //     }
-    //     }
+    public function checkMeet($_hasMeet)
+    {
+        if ($_hasMeet === false) {
+            return "Non contiene carne";
+        } else {
+            return "Contiene della carne";
+        }
+    }
 }
