@@ -1,26 +1,25 @@
 <?php
 require_once __DIR__ .  './models/Food.php';
-// require_once __DIR__ . './models/Category.php';
 require_once __DIR__ . "./models/Game.php";
 require_once __DIR__ . './models/Kennel.php';
 
 
 $foods = [
-    new Food(false, "morbida", 10, "CIBO", 14.99, "Mix di verdure in gelatina per il tuo cucciolo. Ricche di vitamine e sali minerali", "./img/cibo1.png"),
-    new Food(true, "dura", 7, "CIBO", 24.99, "Croccantini di carne da utilizzare da soli o accompagnati a delle verdure. Un pasto completo per il tuo animale", "./img/cibo2.jpg"),
-    new Food(true, "dura", 7, "CIBO", 24.99, "Croccantini di carne da utilizzare da soli o accompagnati a delle verdure. Un pasto completo per il tuo animale", "./img/cibo3.webp"),
+    new Food(false, "morbida", 10, "Cane", "CIBO", 14.99,  "Mix di verdure in gelatina per il tuo cucciolo. Ricche di vitamine e sali minerali", "./img/cibo1.png"),
+    new Food(true, "dura", 7, "Cane", "CIBO", 24.99,  "Croccantini di carne da utilizzare da soli o accompagnati a delle verdure. Un pasto completo per il tuo animale", "./img/cibo2.jpg"),
+    new Food(true, "dura", 7, "Gatto", "CIBO", 24.99,  "Croccantini di carne da utilizzare da soli o accompagnati a delle verdure. Un pasto completo per il tuo animale", "./img/cibo3.webp"),
 
 ];
 $games = [
-    new Game("Plastica Dura", "Palla", 9.99, 12, "GIOCO", "Pallina in plastica dura ideale per il tuo cucciolo.Lavabile e adatta sia in casa che in giardino", "./img/palla1.jpg"),
-    new Game("Plastica Morbida", "Palla", 7.99, 5, "GIOCO", "Pallina in plastica morbida ideale per il tuo cucciolo.Lavabile e adatta sia in casa che in giardino", "./img/palla2.jpg"),
-    new Game("Plastica Morbida", "Palla", 7.99, 5, "GIOCO", "Pallina in plastica morbida ideale per il tuo cucciolo.Lavabile e adatta sia in casa che in giardino", "./img/palla3.jpg")
+    new Game("Plastica Dura", "Palla", 9.99, 12, "Cane e Gatto", "GIOCO", "Pallina in plastica dura ideale per il tuo cucciolo.Lavabile e adatta sia in casa che in giardino", "./img/palla1.jpg"),
+    new Game("Plastica Morbida", "Palla", 7.99, 5, "Cane e Gatto", "GIOCO", "Pallina in plastica morbida ideale per il tuo cucciolo.Lavabile e adatta sia in casa che in giardino", "./img/palla2.jpg"),
+    new Game("Plastica Morbida", "Palla", 7.99, 5, "Cane e Gatto", "GIOCO", "Pallina in plastica morbida ideale per il tuo cucciolo.Lavabile e adatta sia in casa che in giardino", "./img/palla3.jpg")
 
 ];
 $kennels = [
-    new Kennel("Cotone", "Rotondo", 8, "CUCCIA", 19.99, "Cuscino morbido in cotone di forma rotonda ideale per il tuo cucciolo.", "./img/cuccia1.jpg"),
-    new Kennel("Cotone", "Quadrato", 4, "CUCCIA", 17.99, "Cuscino morbido in cotone di forma quadrata ideale per il tuo cucciolo.", "./img/cuccia3.jpg"),
-    new Kennel("Cotone", "Rettangolare", 15, "CUCCIA", 22.99, "Cuscino morbido in cotone di forma rettangolare ideale per il tuo cucciolo.", "./img/cuccia2.webp"),
+    new Kennel("Cotone", "Rotondo", 8, "Cane e Gatto",  "CUCCIA", 19.99, "Cuscino morbido in cotone di forma rotonda ideale per il tuo cucciolo.", "./img/cuccia1.jpg"),
+    new Kennel("Cotone", "Quadrato", 4, "Cane e Gatto", "CUCCIA", 17.99,  "Cuscino morbido in cotone di forma quadrata ideale per il tuo cucciolo.", "./img/cuccia3.jpg"),
+    new Kennel("Cotone", "Rettangolare", 15, "Cane e Gatto", "CUCCIA", 22.99,  "Cuscino morbido in cotone di forma rettangolare ideale per il tuo cucciolo.", "./img/cuccia2.webp"),
 ];
 
 // $kennel1 = new Kennel();
@@ -70,6 +69,7 @@ $kennels = [
                                 <p class="card-text"> Prezzo: <?php echo $gioco->price ?> euro</p>
                                 <p class="card-text">Tipologia di gioco: <?php echo $gioco->form ?></p>
                                 <p class="card-text"> Pezzi disponibili: <?php echo $gioco->quantity ?></p>
+                                <h3 class="card-text">Consigliato per: <?php echo $gioco->category ?></h3>
                             </div>
                         </div>
                     <?php endforeach ?>
@@ -91,6 +91,8 @@ $kennels = [
                                 <p class="card-text">Prezzo: <?php echo $food->price ?> euro</p>
                                 <p class="card-text">Tipo di consistenza: <?php echo $food->consistency ?></p>
                                 <p class="card-text"> Pezzi disponibili: <?php echo $food->quantity ?></p>
+                                <h3 class="card-text">Consigliato per: <?php echo $food->category ?></h3>
+
 
                             </div>
                         </div>
@@ -114,6 +116,8 @@ $kennels = [
                                 <p class="card-text">Tipo di consistenza: <?php echo $kennel->shape ?></p>
                                 <p class="card-text">Tipo di tessuto: <?php echo $kennel->tissue ?></p>
                                 <p class="card-text"> Pezzi disponibili: <?php echo $kennel->quantity ?></p>
+                                <h3 class="card-text">Consigliato per: <?php echo $kennel->category ?></h3>
+
 
                             </div>
                         </div>
