@@ -6,6 +6,7 @@ class Product
 {
 
     public int $quantity;
+    public string $category;
     public string $title;
     public string $description;
     public float $price;
@@ -14,9 +15,11 @@ class Product
 
 
 
-    function __construct($_quantity, $_title, $_price, $_description, $_img)
+
+    function __construct($_quantity, $_category, $_title, $_price, $_description, $_img)
     {
         $this->quantity = $_quantity;
+        $this->category = $_category;
         $this->title = $_title;
         $this->price = $_price;
         $this->description = $_description;
