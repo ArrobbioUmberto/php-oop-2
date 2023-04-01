@@ -37,7 +37,22 @@ $kennels = [
     }
 
     .col>.card-bg-custom {
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .fa-circle-xmark {
+        color: red;
+        font-size: 30px;
+    }
+
+    .fa-circle-check {
+        color: green;
+        font-size: 30px;
+    }
+
+    .checkMeet {
+        display: flex;
+        align-items: center;
     }
 </style>
 
@@ -66,11 +81,11 @@ $kennels = [
                             <img src="<?php echo $gioco->img ?>" class="card-img-top " alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $gioco->title ?></h5>
-                                <p class="card-text">Descrizione prodotto: <?php echo $gioco->description ?></p>
-                                <p class="card-text"> Prezzo: <?php echo $gioco->price ?> euro</p>
-                                <p class="card-text">Tipologia di gioco: <?php echo $gioco->form ?></p>
-                                <p class="card-text"> Pezzi disponibili: <?php echo $gioco->quantity ?></p>
-                                <h3 class="card-text">Consigliato per: <?php echo $gioco->category ?></h3>
+                                <p class="card-text fs-5 ">Descrizione prodotto: <?php echo $gioco->description ?></p>
+                                <p class="card-text fs-5 "> Prezzo: <?php echo $gioco->price ?> euro</p>
+                                <p class="card-text fs-5 ">Tipologia di gioco: <?php echo $gioco->form ?></p>
+                                <p class="card-text fs-5 "> Pezzi disponibili: <?php echo $gioco->quantity ?></p>
+                                <h3 class="card-text fs-5 ">Consigliato per: <?php echo $gioco->category ?></h3>
                             </div>
                         </div>
                     <?php endforeach ?>
@@ -84,20 +99,20 @@ $kennels = [
             <div class="row g-4 d-flex flex-nowrap">
                 <div class="col card-group column-gap-3">
                     <?php foreach ($foods as $food) : ?>
-                        <div class="card align-items-center border-0 card-bg-custom ">
+                        <div class="card align-items-center justify-content-center border-0 card-bg-custom ">
                             <img src="<?php echo $food->img ?>" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $food->title ?></h5>
-                                <p>Presenza di carne: <?php if ($food->hasMeet == false) {
-                                                            echo '<i class="fa-regular fa-circle-check"></i>';
-                                                        } else {
-                                                            echo '<i class="fa-regular fa-circle-xmark"></i>';
-                                                        } ?></p>
-                                <p class="card-text">Descrizione prodotto: <?php echo $food->description ?></p>
-                                <p class="card-text">Prezzo: <?php echo $food->price ?> euro</p>
-                                <p class="card-text">Tipo di consistenza: <?php echo $food->consistency ?></p>
-                                <p class="card-text"> Pezzi disponibili: <?php echo $food->quantity ?></p>
-                                <h3 class="card-text">Consigliato per: <?php echo $food->category ?></h3>
+                                <p class="checkMeet"><strong>Presenza di carne: </strong><?php if ($food->hasMeet == false) {
+                                                                                                echo '<i class="fa-regular fa-circle-xmark"></i>';
+                                                                                            } else {
+                                                                                                echo '<i class="fa-regular fa-circle-check"></i>';
+                                                                                            } ?></p>
+                                <p class="card-text fs-5 ">Descrizione prodotto: <?php echo $food->description ?></p>
+                                <p class="card-text fs-5 ">Prezzo: <?php echo $food->price ?> euro</p>
+                                <p class="card-text fs-5 ">Tipo di consistenza: <?php echo $food->consistency ?></p>
+                                <p class="card-text fs-5 "> Pezzi disponibili: <?php echo $food->quantity ?></p>
+                                <h3 class="card-text fs-5 ">Consigliato per: <?php echo $food->category ?></h3>
 
 
                             </div>
@@ -117,12 +132,12 @@ $kennels = [
                             <img src="<?php echo $kennel->img ?>" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $kennel->title ?></h5>
-                                <p class="card-text">Descrizione prodotto: <?php echo $kennel->description ?></p>
-                                <p class="card-text">Prezzo: <?php echo $kennel->price ?> euro</p>
-                                <p class="card-text">Tipo di consistenza: <?php echo $kennel->shape ?></p>
-                                <p class="card-text">Tipo di tessuto: <?php echo $kennel->tissue ?></p>
-                                <p class="card-text"> Pezzi disponibili: <?php echo $kennel->quantity ?></p>
-                                <h3 class="card-text">Consigliato per: <?php echo $kennel->category ?></h3>
+                                <p class="card-text fs-5 ">Descrizione prodotto: <?php echo $kennel->description ?></p>
+                                <p class="card-text fs-5 ">Prezzo: <?php echo $kennel->price ?> euro</p>
+                                <p class="card-text fs-5 ">Tipo di consistenza: <?php echo $kennel->shape ?></p>
+                                <p class="card-text fs-5 ">Tipo di tessuto: <?php echo $kennel->tissue ?></p>
+                                <p class="card-text fs-5 "> Pezzi disponibili: <?php echo $kennel->quantity ?></p>
+                                <h3 class="card-text fs-5 ">Consigliato per: <?php echo $kennel->category ?></h3>
 
 
                             </div>
