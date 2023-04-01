@@ -1,5 +1,4 @@
 <?php
-// require_once './models/Product.php';
 require_once __DIR__ .  './models/Food.php';
 // require_once __DIR__ . './models/Category.php';
 require_once __DIR__ . "./models/Game.php";
@@ -19,18 +18,27 @@ $games = [
 
 ];
 $kennels = [
-    new Kennel("Cotone", "Rotondo", 8, "Cuscino per animali", 19.99, "Cuscino morbido in cotone di forma rotonda ideale per il tuo cucciolo.", "./img/palla1.jpg"),
-    new Kennel("Cotone", "Quadrato", 4, "Cuscino per animali", 17.99, "Cuscino morbido in cotone di forma quadrata ideale per il tuo cucciolo.", "./img/palla1.jpg"),
-    new Kennel("Cotone", "Rettangolare", 15, "Cuscino per animali", 22.99, "Cuscino morbido in cotone di forma rettangolare ideale per il tuo cucciolo.", "./img/palla1.jpg"),
+    new Kennel("Cotone", "Rotondo", 8, "CUCCIA", 19.99, "Cuscino morbido in cotone di forma rotonda ideale per il tuo cucciolo.", "./img/palla1.jpg"),
+    new Kennel("Cotone", "Quadrato", 4, "CUCCIA", 17.99, "Cuscino morbido in cotone di forma quadrata ideale per il tuo cucciolo.", "./img/palla1.jpg"),
+    new Kennel("Cotone", "Rettangolare", 15, "CUCCIA", 22.99, "Cuscino morbido in cotone di forma rettangolare ideale per il tuo cucciolo.", "./img/palla1.jpg"),
 ];
 
 // $kennel1 = new Kennel();
 ?>
 <style>
     .card>img {
-        width: 200px;
+        width: 100%;
         aspect-ratio: 1;
         object-fit: cover;
+    }
+
+    body {
+        background-image: url('./img/background.jpg');
+        background-repeat: repeat;
+    }
+
+    .col>.card-bg-custom {
+        background-color: rgba(255, 255, 255, 0.8);
     }
 </style>
 
@@ -51,13 +59,13 @@ $kennels = [
 <body>
     <section>
         <div class="container py-5">
-            <div class="row g-4 d-flex flex-nowrap">
-                <div class="col card-group">
+            <div class="row d-flex flex-nowrap">
+                <div class="col card-group column-gap-3">
                     <?php foreach ($games as $gioco) : ?>
-                        <div class="card align-items-center">
-                            <img src="<?php echo $gioco->img ?>" class="card-img-top" alt="...">
+                        <div class="card align-items-center border-0 card-bg-custom  ">
+                            <img src="<?php echo $gioco->img ?>" class="card-img-top " alt="...">
                             <div class="card-body">
-                                <h5 class="card-title"><?php echo $gioco->title ?></h5>
+                                <h2 class="card-title"><?php echo $gioco->title ?></h2>
                                 <p class="card-text">Descrizione prodotto: <?php echo $gioco->description ?></p>
                                 <p class="card-text"> Prezzo: <?php echo $gioco->price ?> euro</p>
                                 <p class="card-text">Tipologia di gioco: <?php echo $gioco->form ?></p>
@@ -73,9 +81,9 @@ $kennels = [
     <section>
         <div class="container py-5">
             <div class="row g-4 d-flex flex-nowrap">
-                <div class="col card-group">
+                <div class="col card-group column-gap-3">
                     <?php foreach ($foods as $food) : ?>
-                        <div class="card align-items-center">
+                        <div class="card align-items-center border-0 card-bg-custom ">
                             <img src="<?php echo $food->img ?>" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $food->title ?></h5>
@@ -95,9 +103,9 @@ $kennels = [
     <section>
         <div class="container py-5">
             <div class="row g-4 d-flex flex-nowrap">
-                <div class="col card-group">
+                <div class="col card-group column-gap-3">
                     <?php foreach ($kennels as $kennel) : ?>
-                        <div class="card align-items-center">
+                        <div class="card align-items-center border-0 card-bg-custom ">
                             <img src="<?php echo $kennel->img ?>" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $kennel->title ?></h5>
