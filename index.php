@@ -6,9 +6,9 @@ require_once __DIR__ . './models/Kennel.php';
 
 
 $foods = [
-    new Food(false, "morbida", 10, "CIBO", 14.99, "Mix di verdure in gelatina per il tuo cucciolo. Ricche di vitamine e sali minerali", "./img/palla1.jpg"),
-    new Food(true, "dura", 7, "CIBO", 24.99, "Croccantini di carne da utilizzare da soli o accompagnati a delle verdure. Un pasto completo per il tuo animale", "./img/palla1.jpg"),
-    new Food(true, "dura", 7, "CIBO", 24.99, "Croccantini di carne da utilizzare da soli o accompagnati a delle verdure. Un pasto completo per il tuo animale", "./img/palla1.jpg"),
+    new Food(false, "morbida", 10, "CIBO", 14.99, "Mix di verdure in gelatina per il tuo cucciolo. Ricche di vitamine e sali minerali", "./img/cibo1.png"),
+    new Food(true, "dura", 7, "CIBO", 24.99, "Croccantini di carne da utilizzare da soli o accompagnati a delle verdure. Un pasto completo per il tuo animale", "./img/cibo2.jpg"),
+    new Food(true, "dura", 7, "CIBO", 24.99, "Croccantini di carne da utilizzare da soli o accompagnati a delle verdure. Un pasto completo per il tuo animale", "./img/cibo3.webp"),
 
 ];
 $games = [
@@ -18,9 +18,9 @@ $games = [
 
 ];
 $kennels = [
-    new Kennel("Cotone", "Rotondo", 8, "CUCCIA", 19.99, "Cuscino morbido in cotone di forma rotonda ideale per il tuo cucciolo.", "./img/palla1.jpg"),
-    new Kennel("Cotone", "Quadrato", 4, "CUCCIA", 17.99, "Cuscino morbido in cotone di forma quadrata ideale per il tuo cucciolo.", "./img/palla1.jpg"),
-    new Kennel("Cotone", "Rettangolare", 15, "CUCCIA", 22.99, "Cuscino morbido in cotone di forma rettangolare ideale per il tuo cucciolo.", "./img/palla1.jpg"),
+    new Kennel("Cotone", "Rotondo", 8, "CUCCIA", 19.99, "Cuscino morbido in cotone di forma rotonda ideale per il tuo cucciolo.", "./img/cuccia1.jpg"),
+    new Kennel("Cotone", "Quadrato", 4, "CUCCIA", 17.99, "Cuscino morbido in cotone di forma quadrata ideale per il tuo cucciolo.", "./img/cuccia3.jpg"),
+    new Kennel("Cotone", "Rettangolare", 15, "CUCCIA", 22.99, "Cuscino morbido in cotone di forma rettangolare ideale per il tuo cucciolo.", "./img/cuccia2.webp"),
 ];
 
 // $kennel1 = new Kennel();
