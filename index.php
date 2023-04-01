@@ -13,8 +13,8 @@ $foods = [
 ];
 $games = [
     new Game("Plastica Dura", "Palla", 9.99, 12, "GIOCO", "Pallina in plastica dura ideale per il tuo cucciolo.Lavabile e adatta sia in casa che in giardino", "./img/palla1.jpg"),
-    new Game("Plastica Morbida", "Palla", 7.99, 5, "GIOCO", "Pallina in plastica morbida ideale per il tuo cucciolo.Lavabile e adatta sia in casa che in giardino", "./img/palla1.jpg"),
-    new Game("Plastica Morbida", "Palla", 7.99, 5, "GIOCO", "Pallina in plastica morbida ideale per il tuo cucciolo.Lavabile e adatta sia in casa che in giardino", "./img/palla1.jpg")
+    new Game("Plastica Morbida", "Palla", 7.99, 5, "GIOCO", "Pallina in plastica morbida ideale per il tuo cucciolo.Lavabile e adatta sia in casa che in giardino", "./img/palla2.jpg"),
+    new Game("Plastica Morbida", "Palla", 7.99, 5, "GIOCO", "Pallina in plastica morbida ideale per il tuo cucciolo.Lavabile e adatta sia in casa che in giardino", "./img/palla3.jpg")
 
 ];
 $kennels = [
