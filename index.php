@@ -52,6 +52,7 @@ $kennels = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c5d4023dee.js" crossorigin="anonymous"></script>
     <title>PHP-OOP-2</title>
 </head>
 
@@ -64,7 +65,7 @@ $kennels = [
                         <div class="card align-items-center border-0 card-bg-custom  ">
                             <img src="<?php echo $gioco->img ?>" class="card-img-top " alt="...">
                             <div class="card-body">
-                                <h2 class="card-title"><?php echo $gioco->title ?></h2>
+                                <h5 class="card-title"><?php echo $gioco->title ?></h5>
                                 <p class="card-text">Descrizione prodotto: <?php echo $gioco->description ?></p>
                                 <p class="card-text"> Prezzo: <?php echo $gioco->price ?> euro</p>
                                 <p class="card-text">Tipologia di gioco: <?php echo $gioco->form ?></p>
@@ -87,6 +88,11 @@ $kennels = [
                             <img src="<?php echo $food->img ?>" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $food->title ?></h5>
+                                <p>Presenza di carne: <?php if ($food->hasMeet == false) {
+                                                            echo '<i class="fa-regular fa-circle-check"></i>';
+                                                        } else {
+                                                            echo '<i class="fa-regular fa-circle-xmark"></i>';
+                                                        } ?></p>
                                 <p class="card-text">Descrizione prodotto: <?php echo $food->description ?></p>
                                 <p class="card-text">Prezzo: <?php echo $food->price ?> euro</p>
                                 <p class="card-text">Tipo di consistenza: <?php echo $food->consistency ?></p>
