@@ -1,10 +1,10 @@
 <?php
-
+require_once __DIR__ . "/Validator.php";
 //per prima cosa creo la classe principale di prodotti
 
 class Product
 {
-
+    use Validator;
     public int $quantity;
     public string $category;
     public string $title;
@@ -20,7 +20,7 @@ class Product
     {
         $this->quantity = $_quantity;
         $this->category = $_category;
-        $this->title = $_title;
+        $this->setTitle($_title);
         $this->price = $_price;
         $this->description = $_description;
         $this->img = $_img;
@@ -31,5 +31,12 @@ class Product
             throw new Exception("Il testo non rispetta la lunghezza consentita");
         }
         return $this->description;
+    }
+    public function setTitle(string $newValue)
+    {
+        if (!$this->testTitle($newValue)) {
+            return;
+        };
+        $this->title = $newValue;
     }
 }
