@@ -25,13 +25,11 @@ class Product
         $this->description = $_description;
         $this->img = $_img;
     }
-    // public function setQuantity($value){
-    //     if($value < 0){
-    //         return "Prodotto non disponibile";
-    //     } else if (is_null($value) || is_nan($value)){
-    //         return "Nessun numero valido inserito";
-    //     }
-    //     return $this->quantity = $value;
-
-    // }
+    function checkText()
+    {
+        if (strlen($this->description) < 5 || strlen($this->description) > 255) {
+            throw new Exception("Il testo non rispetta la lunghezza consentita");
+        }
+        return $this->description;
+    }
 }
